@@ -1,0 +1,53 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of inbox_class
+ *
+ * @author inderjeet
+ */
+include_once 'paginator.php';
+define('include_config', TRUE);
+include_once '../dbfiles/config.php';
+class inbox_class{
+
+    private $user;
+
+    public function inbox_content($u) {
+        db_connect();
+        $this->user=$u;
+        $query = "SELECT COUNT(*) FROM message_rec where `to`='$this->user'";
+        $result = mysql_query($query) or die(mysql_error());
+        $num_rows = mysql_fetch_row($result);
+        //echo $num_rows;
+        $pages = new Paginator;
+        $pages->items_total = $num_rows[0];
+        $pages->mid_range = 9; // Number of pages to display. Must be odd and > 3
+        $pages->paginate();
+
+        echo $pages->display_pages();
+        echo "<span class=\"\" >" . $pages->display_jump_menu() . $pages->display_items_per_page() . "</span>";
+
+        $query2 = "SELECT subject, remarks, `from`, `to` FROM message_rec where `to`='$this->user' ORDER BY auto_inc DESC $pages->limit";
+        $result2 = mysql_query($query2) or die(mysql_error());
+
+        echo "<table cellspacing=0 width=95% align=center>";
+        echo "<tr><th>City</th><th>Population</th><th>Country</th><th>Continent</th><th>Region</th></tr>";
+        while ($row = mysql_fetch_array($result2)) {
+           
+            echo "<tr onmouseover=\"hilite(this)\" onmouseout=\"lowlite(this)\"><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td></tr>\n";
+        }
+        echo "</table>";
+
+        echo $pages->display_pages();
+        echo "<p class=\"paginate\">Page: $pages->current_page of $pages->num_pages</p>\n";
+        //echo "<p class=\"paginate\">SELECT * FROM table $pages->limit (retrieve records $pages->low-$pages->high from table - $pages->items_total item total / $pages->items_per_page items per page)";
+    }
+
+}
+
+?>

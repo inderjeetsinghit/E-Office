@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^home/login$ ?f=home&a=login //this redirects to ?f=home..etc, instead
+RewriteRule ^fb/init([^/.]*)$ ?f=fb&a=init&%{QUERY_STRING}
+RewriteRule ^post/show([^/.]*)$ ?f=post&a=show&%{QUERY_STRING}

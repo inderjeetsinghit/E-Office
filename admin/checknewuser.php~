@@ -1,0 +1,32 @@
+<?php
+session_start();
+if(!session_is_registered(username)&& !session_is_registered(type)){
+header("location: ../index.php");
+}
+else
+{
+    if($_SESSION['type']!='admin'){ header("location: ../checklogin/error.php");}
+}
+include "../dbfiles/config.php";
+//include("..db_files/dbconnect.php");
+$username = $_GET["q"];
+function usernameExists($user) {
+  // in production use we would look up the username in 
+  // our database, but for this example, we'll just check
+  // to see if its in an array of preset usernames.
+  db_connect();
+  $query= mysql_query("Select user_name from users where username='$user'");
+  if($query){
+ if (mysql_num_rows($query)){
+    echo '<span style="color:red";>Username Taken</span>';
+  }
+else {
+    echo '<span style="color:green;">Username Available</span>';
+  }
+}
+else{
+   echo '<span style="color:red";>Database Error</span>';
+}
+}
+usernameExists($username);
+?>

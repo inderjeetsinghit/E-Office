@@ -1,0 +1,105 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+function blockty($ty){
+if ($ty == "receipt") {
+    echo '<h3>Receipt</h3>
+            <ul class="toggle">
+                <li class="icn_new_article"><a href="up_form.php">New Upload</a></li>
+                <li class="icn_edit_article"><a href="browse.php">Browse Diaries</a></li>
+                <li class="icn_categories"><a href="inbox.php">Inbox</a></li>
+                <li class="icn_tags"><a href="outbox.php">Sent</a></li>
+                <li class="icn_tags"><a href="closed.php">Closed</a></li>
+            </ul>
+            
+            <h3>E-File</h3>
+            <ul class="toggle">
+                <li class="icn_folder"><a href="../efile/inbox.php">Inbox</a></li>
+                <li class="icn_photo"><a href="../efile/new.php">Create New</a></li>
+                <li class="icn_audio"><a href="../efile/sent.php">Sent</a></li>
+                <li class="icn_video"><a href="../efile/closed.php">Closed</a></li>
+            </ul>';
+    if ($_SESSION['type'] == 'admin') {
+        echo ' <h3>Users</h3>
+            <ul class="toggle">
+                <li class="icn_add_user"><a href="../admin/newuser.php">Add New User</a></li>
+                <li class="icn_view_users"><a href="../admin/viewuser.php">View Users</a></li>
+                <li class="icn_profile"><a href="../admin/removeuser.php">Remove User</a></li>
+                <li class="icn_settings"><a href="#">Options</a></li>
+                <li class="icn_security"><a href="#">Security</a></li>
+            </ul>';
+            }
+            echo '<h3>Other</h3>
+            <ul class="toggle">
+                
+                <li class="icn_jump_back"><a href="../checklogin/logout.ph">Logout</a></li>
+            </ul>';
+}
+ elseif ($ty=='file') {
+    echo '<h3>Receipt</h3>
+            <ul class="toggle">
+                <li class="icn_new_article"><a href="../receipt/up_form.php">New Upload</a></li>
+                <li class="icn_edit_article"><a href="../receipt/browse.php">Browse Diaries</a></li>
+                <li class="icn_categories"><a href="../receipt/inbox.php">Inbox</a></li>
+                <li class="icn_tags"><a href="../receipt/outbox.php">Sent</a></li>
+                <li class="icn_tags"><a href="../receipt/closed.php">Closed</a></li>
+            </ul>
+            
+            <h3>E-File</h3>
+            <ul class="toggle">
+                <li class="icn_folder"><a href="inbox.php">Inbox</a></li>
+                <li class="icn_photo"><a href="new.php">Create New</a></li>
+                <li class="icn_audio"><a href="sent.php">Sent</a></li>
+                <li class="icn_video"><a href="closed.php">Closed</a></li>
+            </ul>';
+    if ($_SESSION['type'] == 'admin') {
+        echo ' <h3>Users</h3>
+            <ul class="toggle">
+                <li class="icn_add_user"><a href="../admin/newuser.php">Add New User</a></li>
+                <li class="icn_view_users"><a href="../admin/viewuser.php">View Users</a></li>
+                <li class="icn_profile"><a href="../admin/removeuser.php">Remove User</a></li>
+                <li class="icn_settings"><a href="#">Options</a></li>
+                <li class="icn_security"><a href="#">Security</a></li>
+            </ul>';
+            }
+            echo '<h3>Other</h3>
+            <ul class="toggle">
+                
+                <li class="icn_jump_back"><a href="../checklogin/logout.php">Logout</a></li>
+            </ul>';
+    
+}
+ elseif ($ty=='admin') {
+    echo '<h3>Receipt</h3>
+            <ul class="toggle">
+                <li class="icn_new_article"><a href="../receipt/up_form.php">New Upload</a></li>
+                <li class="icn_edit_article"><a href="../receipt/browse.php">Browse Diaries</a></li>
+                <li class="icn_categories"><a href="../receipt/inbox.php">Inbox</a></li>
+                <li class="icn_tags"><a href="../receipt/outbox.php">Sent</a></li>
+                <li class="icn_tags"><a href="../receipt/closed.php">Closed</a></li>
+            </ul>
+            
+            <h3>E-File</h3>
+            <ul class="toggle">
+                <li class="icn_folder"><a href="../efile/inbox.php">Inbox</a></li>
+                <li class="icn_photo"><a href="../efile/new.php">Create New</a></li>
+                <li class="icn_audio"><a href="../efile/sent.php">Sent</a></li>
+                <li class="icn_video"><a href="../efile/closed.php">Closed</a></li>
+            </ul> <h3>Users</h3>
+            <ul class="toggle">
+                <li class="icn_add_user"><a href="admin/newuser.php">Add New User</a></li>
+                <li class="icn_view_users"><a href="admin/viewuser.php">View Users</a></li>
+                <li class="icn_profile"><a href="admin/removeuser.php">Remove User</a></li>
+                <li class="icn_settings"><a href="#">Options</a></li>
+                <li class="icn_security"><a href="#">Security</a></li>
+            </ul><h3>Other</h3>
+            <ul class="toggle">
+                
+                <li class="icn_jump_back"><a href="../checklogin/logout.php">Logout</a></li>
+            </ul>';
+}
+}
+?>

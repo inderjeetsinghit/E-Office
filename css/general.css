@@ -1,0 +1,315 @@
+/******* FORM *******/
+#receiptform{
+	padding: 0 10px 10px;
+}
+#receiptform label{
+	display: block;
+	color: #797979;
+	font-weight: 700;
+	line-height: 1.4em;
+}
+#receiptform input{
+	width: 220px;
+	padding: 6px;
+	color: #000000;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-size: 13px;
+	border: 1px solid #cecece;
+}
+#receiptform input.error{
+	background: #f8dbdb;
+	border-color: #e77776;
+}
+#receiptform textarea{
+	width: 35%;
+	height: 10%;
+	padding: 6px;
+	color: #000000;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-style: italic;
+	font-size: 12px;
+	border: 1px solid #cecece;
+}
+#receiptform textarea.error{
+	background: #f8dbdb;
+	border-color: #e77776;
+}
+#receiptform div{
+	margin-bottom: 15px;
+}
+#receiptform div span{
+	margin-left: 10px;
+	color: #b1b1b1;
+	font-size: 11px;
+	font-style: italic;
+}
+#receiptform div span.error{
+	color: #e46c6e;
+}
+#receiptform #send{
+	background: #6f9ff1;
+	color: #fff;
+	font-weight: 700;
+	font-style: normal;
+	border: 0;
+	cursor: pointer;
+}
+#receiptform #send:hover{
+	background: #79a7f1;
+}
+#receiptform #reset{
+	background: #6f9ff1;
+	color: #fff;
+	font-weight: 700;
+	font-style: normal;
+	border: 0;
+	cursor: pointer;
+}
+#receiptform #reset:hover{
+	background: #79a7f1;
+}
+#error{
+	margin-bottom: 20px;
+	border: 1px solid #efefef;
+}
+#error ul{
+	list-style: square;
+	padding: 5px;
+	font-size: 11px;
+}
+#error ul li{
+	list-style-position: inside;
+	line-height: 1.6em;
+}
+#error ul li strong{
+	color: #e46c6d;
+}
+#error.valid ul li strong{
+	color: #93d72e;
+}
+#disbursementform{
+	padding: 0 10px 10px;
+}
+#disbursementform label{
+	display: block;
+	color: #797979;
+	font-weight: 700;
+	line-height: 1.4em;
+}
+#disbursementform input{
+	width: 220px;
+	padding: 6px;
+	color: #000000;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-size: 13px;
+	border: 1px solid #cecece;
+}
+#disbursementform input.error{
+	background: #f8dbdb;
+	border-color: #e77776;
+}
+#disbursementform textarea{
+	width: 35%;
+	height: 10%;
+	padding: 6px;
+	color: #000000;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-style: italic;
+	font-size: 12px;
+	border: 1px solid #cecece;
+}
+#disbursementform textarea.error{
+	background: #f8dbdb;
+	border-color: #e77776;
+}
+#disbursementform div{
+	margin-bottom: 15px;
+}
+#disbursementform div span{
+	margin-left: 10px;
+	color: #b1b1b1;
+	font-size: 11px;
+	font-style: italic;
+}
+#disbursementform div span.error{
+	color: #e46c6e;
+}
+#disbursementform #send{
+	background: #6f9ff1;
+	color: #fff;
+	font-weight: 700;
+	font-style: normal;
+	border: 0;
+	cursor: pointer;
+}
+#disbursementform #send:hover{
+	background: #79a7f1;
+}
+#disbursementform #reset{
+	background: #6f9ff1;
+	color: #fff;
+	font-weight: 700;
+	font-style: normal;
+	border: 0;
+	cursor: pointer;
+}
+#disbursementform #reset:hover{
+	background: #79a7f1;
+}
+#reportingform{
+	padding: 0 10px 10px;
+}
+#reportingform label{
+	display: block;
+	color: #797979;
+	font-weight: 700;
+	line-height: 1.4em;
+}
+#reportingform input{
+	width: 220px;
+	padding: 6px;
+	color: #000000;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-size: 13px;
+	border: 1px solid #cecece;
+}
+#reportingform select{
+	width: 220px;
+	padding: 6px;
+	color: #000000;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-size: 13px;
+	border: 1px solid #cecece;
+}
+#reportingform input.error{
+	background: #f8dbdb;
+	border-color: #e77776;
+}
+#reportingform textarea{
+	width: 35%;
+	height: 10%;
+	padding: 6px;
+	color: #000000;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-style: italic;
+	font-size: 12px;
+	border: 1px solid #cecece;
+}
+#reportingform textarea.error{
+	background: #f8dbdb;
+	border-color: #e77776;
+}
+#reportingform div{
+	margin-bottom: 15px;
+}
+#reportingform div span{
+	margin-left: 10px;
+	color: #b1b1b1;
+	font-size: 11px;
+	font-style: italic;
+}
+#reportingform div span.error{
+	color: #e46c6e;
+}
+#reportingform #send{
+	background: #6f9ff1;
+	color: #fff;
+	font-weight: 700;
+	font-style: normal;
+	border: 0;
+	cursor: pointer;
+}
+#reportingform #send:hover{
+	background: #79a7f1;
+}
+#reportingform #reset{
+	background: #6f9ff1;
+	color: #fff;
+	font-weight: 700;
+	font-style: normal;
+	border: 0;
+	cursor: pointer;
+}
+#reportingform #reset:hover{
+	background: #79a7f1;
+}
+/******* /FORM *******/
+/***New USER Form**/
+#newuserform{
+	padding: 0 10px 10px;
+}
+#newuserform label{
+	display: block;
+	color: #797979;
+	font-weight: 700;
+	line-height: 1.4em;
+}
+#newuserform input{
+	width: 220px;
+	padding: 6px;
+	color: #000000;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-size: 13px;
+	border: 1px solid #cecece;
+}
+#newuserform select{
+	width: 220px;
+	padding: 6px;
+	color: #000000;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-size: 13px;
+	border: 1px solid #cecece;
+}
+#newuserform input.error{
+	background: #f8dbdb;
+	border-color: #e77776;
+}
+#newuserform textarea{
+	width: 35%;
+	height: 10%;
+	padding: 6px;
+	color: #000000;
+	font-family: Arial,  Verdana, Helvetica, sans-serif;
+	font-style: italic;
+	font-size: 12px;
+	border: 1px solid #cecece;
+}
+#newuserform textarea.error{
+	background: #f8dbdb;
+	border-color: #e77776;
+}
+#newuserform div{
+	margin-bottom: 15px;
+}
+#newuserform div span{
+	margin-left: 10px;
+	color: #b1b1b1;
+	font-size: 11px;
+	font-style: italic;
+}
+#newuserform div span.error{
+	color: #e46c6e;
+}
+#newuserform #send{
+	background: #6f9ff1;
+	color: #fff;
+	font-weight: 700;
+	font-style: normal;
+	border: 0;
+	cursor: pointer;
+}
+#newuserform #send:hover{
+	background: #79a7f1;
+}
+#newuserform #reset{
+	background: #6f9ff1;
+	color: #fff;
+	font-weight: 700;
+	font-style: normal;
+	border: 0;
+	cursor: pointer;
+}
+#newuserform #reset:hover{
+	background: #79a7f1;
+}
+/***New User form End***/
