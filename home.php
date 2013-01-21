@@ -104,14 +104,14 @@ session_start();
                 <li class="icn_add_user"><a href="admin/newuser.php">Add New User</a></li>
                 <li class="icn_view_users"><a href="admin/viewuser.php">View Users</a></li>
                 <li class="icn_profile"><a href="admin/removeuser.php">Remove User</a></li>
-                <li class="icn_settings"><a href="#">Options</a></li>
-                <li class="icn_security"><a href="#">Security</a></li>
+                <li class="icn_settings"><a href="admin/option.php">Options</a></li>
+                <li class="icn_security"><a href="admin/change.php">Change Password</a></li>
             </ul>
            <?php } ?>
             <h3>Other</h3>
             <ul class="toggle">
                 
-                <li class="icn_logout"><a href="checklogin/logout.php">Logout</a></li>
+                <li class="icn_logout"><a href="checklogin/logout.php?log=logout">Logout</a></li>
             </ul>
 		
 		<footer>
@@ -123,6 +123,7 @@ session_start();
 	
 	<section id="main" class="column"><br/><br/><br/><br/>
 		<center>
+                    
 		<img src="images/eoffice.png" alt="EOffice" height="200" width="600" align="center"/>
                 </center>
 	</section>

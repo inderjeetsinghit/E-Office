@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -14,13 +12,13 @@
 	<!-- stylesheets -->
   	<link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
   	<link rel="stylesheet" href="css/slide.css" type="text/css" media="screen" />
-	
+
   	<!-- PNG FIX for IE6 -->
   	<!-- http://24ways.org/2007/supersleight-transparent-png-in-ie6 -->
 	<!--[if lte IE 6]>
 		<script type="text/javascript" src="js/pngfix/supersleight-min.js"></script>
 	<![endif]-->
-	 
+
     <!-- jQuery - the core -->
 	<script src="js/jquery-1.3.2.min.js" type="text/javascript"></script>
 	<!-- Sliding effect -->
@@ -65,7 +63,7 @@
 				<!-- Register Form -->
 				<form action="process_user_request.php" method="post">
 					<h1>Not a member yet? Sign Up!</h1>				
-					
+
 					<label class="grey" for="email">Email:</label>
 					<input class="field" type="text" name="email" id="email" size="23" />
 					<label>A Username will be e-mailed to you.</label>
@@ -88,7 +86,7 @@
 			<li class="right">&nbsp;</li>
 		</ul> 
 	</div> <!-- / top -->
-	
+
 </div> <!--panel -->
 
     <div id="container">

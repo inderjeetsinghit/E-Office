@@ -65,12 +65,8 @@ class inbox_class{
                 }
                 $i++;
             }
-            if($list_array==''){
-               $query2 = "SELECT * FROM message_rec where `to`='$this->user' or `to`='all' ORDER BY auto_inc DESC $pages->limit";
-            }
-            else{
+            
             $query2 = "SELECT * FROM message_rec where  $list_array and (`to`='$this->user' or `to`='all') ORDER BY auto_inc DESC $pages->limit";
-            }
         }
  elseif ($type=='closed') {
         $ultimate_user= $_SESSION['username'];
@@ -108,7 +104,7 @@ class inbox_class{
                 echo '<tr  onmouseover=\"hilite(this)\" onmouseout=\"lowlite(this)\">';
           
             }
-            echo "<td>$i</td><td>&nbsp;</td><td>".'<a href=open_mesg.php?id='.$row[id].'&call_open=set&auto_id='.$row['auto_inc'].'>'."$row[id]/$row[tag]/$row[date_enter]</a></td><td>$row[subject]</td><td>$row[from]</td><td>$row[date_enter]</td><td>$row[due_date]</td><td>&nbsp;<img src='../images/icn_jump_back.png' title='Reply' />&nbsp; &nbsp;<img src='../images/icn_forward.png' title='Forward' />&nbsp; &nbsp;<img src='../images/icn_logout.png' title='Remove' /></td></tr>\n";
+            echo "<td>$i</td><td>&nbsp;</td><td>".'<a href=open_mesg?id='.$row[id].'&call_open=set&auto_id='.$row['auto_inc'].'>'."$row[id]/$row[tag]/$row[date_enter]</a></td><td>$row[subject]</td><td>$row[from]</td><td>$row[date_enter]</td><td>$row[due_date]</td><td>&nbsp;<img src='../images/icn_jump_back.png' title='Reply' />&nbsp; &nbsp;<img src='../images/icn_forward.png' title='Forward' />&nbsp; &nbsp;<img src='../images/icn_logout.png' title='Remove' /></td></tr>\n";
             $i= $i +1;
             
         }

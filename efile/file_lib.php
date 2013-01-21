@@ -34,9 +34,9 @@ class new_efile{
             $all_file='';
             while($row= mysql_fetch_array($this->query)){
                 $all_file.='<tr> 
-   					<td><input type="checkbox" name="attachfile[]" class="attachfile" value="'.$row['id'].'/'.$_SESSION['dep'].'/'.$row['date'].'"></td> 
-    				<td>'.$row['id'].'/'.$_SESSION['dep'].'/'.$row['date'].'</td> 
-    				<td>'.$row['date'].'</td> 
+   					<td><input type="checkbox" name="attachfile[]" class="attachfile" value="'.$row['id'].'/'.$_SESSION['dep'].'/'.$row['enter_date'].'"></td> 
+    				<td>'.$row['id'].'/'.$_SESSION['dep'].'/'.$row['enter_date'].'</td> 
+    				<td>'.$row['enter_date'].'</td> 
                                 
     				</tr> ';
             }

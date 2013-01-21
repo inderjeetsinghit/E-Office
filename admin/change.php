@@ -53,32 +53,31 @@ if(!session_cache_expire()){
         <script src="../js/hideshow.js" type="text/javascript"></script>
         <script type="text/javascript">
 function validate(){
-    var user= document.forms["create_user"]["newusername"];
+    var user= document.forms["change_pass"]["oldpass"];
     if(user.value=='' || user.value==''){
         alert('User Name cannot be empty');
-        document.user.focus();
         return false;
+        document.user.focus();
+        
     }
-    var newpass= document.forms["create_user"]["newpassword"].value;
+    var newpass= document.forms["change_pass"]["newpassword"].value;
     if(newpass==null || newpass==''){
         alert('Password field cannot be empty');
-        document.create_user.newpassword.focus();
         return false;
+        document.change_pass.newpassword.focus();
+        
     } 
-    var confirmpass= document.forms["create_user"]["confirmpassword"].value;
+    var confirmpass= document.forms["change_pass"]["confirmpassword"].value;
     if(confirmpass!=newpass){
         alert('Carefully Confirm your password');
-        document.create_user.newpassword.value='';
-        document.create_user.confirmpassword.value='';
-        document.create_user.newpassword.focus();
+        
+        document.change_pass.newpassword.value='';
+        document.change_pass.confirmpassword.value='';
         return false;
+        document.change_pass.newpassword.focus();
+        
     }
-    var ty= document.forms["create_user"]["type"];
-    if(ty.value=='' || ty.value==null){
-        alert("You didn't select any type");
-        ty.focus();
-        return false;
-    }
+   
 }
 </script>
 
@@ -163,13 +162,13 @@ function validate(){
 
 
                     </h3><br/></header>
-                <form  method="post" action="create_user.php" name="create_user" onsubmit="return validate()">
+                <form  method="post" action="change_process.php" name="change_pass" onsubmit="return validate()">
   
     <table>
         <tr><td>&nbsp;</td></tr>
-        <tr><td colspan="2"><?php echo $_GET['message'];?></td></tr>
+        <tr><td colspan="2"><?php echo base64_decode($_GET['mesg']);?></td></tr>
     <tr>
-        <td><label>New UserName:</label></td><td><input  type="text" id="newusername" name="newusername" title="Enter New Username" /></td>
+        <td><label>Old Password:</label></td><td><input  type="password" id="oldpass" name="oldpass" title="Enter Old Password" /></td>
         
         </tr>
     <tr>
@@ -178,53 +177,8 @@ function validate(){
     <tr>
         <td width="150px"><label>Confirm Password:</label></td><td><input type="password" name="confirmpassword" id="confirmpassword" title="Please Confirm Password"/></td>
     </tr>
-    <tr><td><label>Type:</label><td><select name="type" id="type">
-                <option value="">Select the Category</option>
-                    <option value="normal">
-                        HOD
-                    </option>
-                    <option value="admin">
-                        Admin
-                    </option>
-                    <option value="clerk">Clerk</option></select>
-    </td></td></tr>
-    <tr><td></td></tr>
-    <tr><td>Department/Branch</td><td><select name="dep"><option value="">Select Department</option>
-                <option value="IT">
-                    INFORMATION TECHNOLOGY
-                </option>
-                <option value="CSE">
-                    COMPUTER SCIENCE AND ENGINEERING
-                </option>
-                <option value="ME">
-                    MECHANICAL ENGINEERING
-                </option>
-                <option value="AS">
-                    APPLIED SCIENCE
-                </option>
-                <option value="CE">
-                    CIVIL ENGINEERING
-                </option>
-                <option value="AD">
-                    ADMINISTRATION DEPARTMENT
-                </option>
-                <option value="CA">
-                    COMPUTER APPLICATIONS
-                </option>
-                <option value="BBA">
-                    BUSINESS ADMINISTRATION
-                </option>
-                <option value="PE">
-                    PRODUCTION ENGINEERING
-                </option>
-                <option value="ECE">
-                    ELECTRONICS & COMMUNICATION ENGINEERING
-                </option>
-
-                <option value="TP">T&AMP;P</option>
-            </select></td></tr>
-    <tr><td>Email</td><td><input type="text" value="" name="email"/></td>
-    <tr><td colspan="2"><input type="submit" value="Create User"/></td></tr>
+    
+    <tr><td colspan="2"><input type="submit" value="Change Password" name="change_pro"/></td></tr>
     </table>
      
       </form>

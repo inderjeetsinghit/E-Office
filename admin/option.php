@@ -53,32 +53,21 @@ if(!session_cache_expire()){
         <script src="../js/hideshow.js" type="text/javascript"></script>
         <script type="text/javascript">
 function validate(){
-    var user= document.forms["create_user"]["newusername"];
+    var user= document.forms["option"]["user_id"];
     if(user.value=='' || user.value==''){
-        alert('User Name cannot be empty');
+        alert('User Name has to be selected');
+        return false;
         document.user.focus();
-        return false;
+        
     }
-    var newpass= document.forms["create_user"]["newpassword"].value;
-    if(newpass==null || newpass==''){
-        alert('Password field cannot be empty');
-        document.create_user.newpassword.focus();
+    var deps= document.forms["option"]["dep"].value;
+    if(deps==null || deps==''){
+        alert('Department has to be selected');
         return false;
+        document.option.deps.focus();
+        
     } 
-    var confirmpass= document.forms["create_user"]["confirmpassword"].value;
-    if(confirmpass!=newpass){
-        alert('Carefully Confirm your password');
-        document.create_user.newpassword.value='';
-        document.create_user.confirmpassword.value='';
-        document.create_user.newpassword.focus();
-        return false;
-    }
-    var ty= document.forms["create_user"]["type"];
-    if(ty.value=='' || ty.value==null){
-        alert("You didn't select any type");
-        ty.focus();
-        return false;
-    }
+    
 }
 </script>
 
@@ -163,30 +152,21 @@ function validate(){
 
 
                     </h3><br/></header>
-                <form  method="post" action="create_user.php" name="create_user" onsubmit="return validate()">
+                <form  method="post" action="option_process.php" name="option" >
   
     <table>
         <tr><td>&nbsp;</td></tr>
-        <tr><td colspan="2"><?php echo $_GET['message'];?></td></tr>
-    <tr>
-        <td><label>New UserName:</label></td><td><input  type="text" id="newusername" name="newusername" title="Enter New Username" /></td>
-        
-        </tr>
-    <tr>
-        <td><label>New Password:</label></td><td colspan="2"><input type="password" name="newpassword" id="newpassword" title="Enter Password"/></td>
-    </tr>
-    <tr>
-        <td width="150px"><label>Confirm Password:</label></td><td><input type="password" name="confirmpassword" id="confirmpassword" title="Please Confirm Password"/></td>
-    </tr>
-    <tr><td><label>Type:</label><td><select name="type" id="type">
-                <option value="">Select the Category</option>
-                    <option value="normal">
-                        HOD
-                    </option>
-                    <option value="admin">
-                        Admin
-                    </option>
-                    <option value="clerk">Clerk</option></select>
+        <tr><td colspan="2"><?php echo base64_decode($_GET['mesg']);?></td></tr>
+    
+    <tr><td><label>Users Available:</label><td><select name="user_id" id="type">
+                <option value="">Select the Username</option>
+                <?php 
+                define('include_user_lib', TRUE);
+                include_once 'user_lib.php';
+                $get_list= new self_reg();
+                $get_list->get_user_list();
+                ?>
+            </select>
     </td></td></tr>
     <tr><td></td></tr>
     <tr><td>Department/Branch</td><td><select name="dep"><option value="">Select Department</option>
@@ -223,8 +203,8 @@ function validate(){
 
                 <option value="TP">T&AMP;P</option>
             </select></td></tr>
-    <tr><td>Email</td><td><input type="text" value="" name="email"/></td>
-    <tr><td colspan="2"><input type="submit" value="Create User"/></td></tr>
+    
+    <tr><td colspan="2"><input type="submit" name="change" value="Change Department" onclick="return validate();"/></td></tr>
     </table>
      
       </form>

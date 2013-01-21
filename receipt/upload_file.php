@@ -21,7 +21,8 @@ if (isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST") {
                 db_connect();
                 $user= $_SESSION['username'];
                 $comp_path= $path.$actual_image_name;
-                $query= mysql_query("Insert into file_upload (path, user) values ('$comp_path', '$user')");
+                $date= date("Y-m-d");
+                $query= mysql_query("Insert into file_upload (path, user, enter_date) values ('$comp_path', '$user', '$date')");
                 echo 'File Uploaded. File Name is '.$actual_image_name.'<iframe src= upload_dir/' . $actual_image_name . ' style="width:98%; height:500px;"></iframe>';
             }
             else

@@ -27,8 +27,8 @@ if ($_SESSION['username'] != NULL) {
                 <li class="icn_add_user"><a href="../admin/newuser.php">Add New User</a></li>
                 <li class="icn_view_users"><a href="../admin/viewuser.php">View Users</a></li>
                 <li class="icn_profile"><a href="../admin/removeuser.php">Remove User</a></li>
-                <li class="icn_settings"><a href="#">Options</a></li>
-                <li class="icn_security"><a href="#">Security</a></li>
+                <li class="icn_settings"><a href="../admin/option.php">Options</a></li>
+                <li class="icn_security"><a href="../admin/change.php">Change Password</a></li>
             </ul>';
                 } elseif ($_SESSION['type'] == 'normal') {
                     echo '<h3>Users</h3>
@@ -37,7 +37,7 @@ if ($_SESSION['username'] != NULL) {
                 <li class="icn_view_users"><strike>View Users</strike></li>
                 <li class="icn_profile"><strike>Remove User</strike></li>
                 <li class="icn_settings"><strike>Options</strike></li>
-                <li class="icn_security"><strike>Security</strike></li>';
+                <li class="icn_security"><strike>Change Password</strike></li>';
                 }
                 echo '<h3>Other</h3>
             <ul class="toggle">
@@ -66,7 +66,7 @@ if ($_SESSION['username'] != NULL) {
                 <li class="icn_view_users"><strike>View Users</strike></li>
                 <li class="icn_profile"><strike>Remove User</strike></li>
                 <li class="icn_settings"><strike>Options</strike></li>
-                <li class="icn_security"><strike>Security</strike></li>
+                <li class="icn_security"><strike>Change Password</strike></li>
             </ul><h3>Other</h3>
             <ul class="toggle">
                 
@@ -97,8 +97,8 @@ if ($_SESSION['username'] != NULL) {
                 <li class="icn_add_user"><a href="../admin/newuser.php">Add New User</a></li>
                 <li class="icn_view_users"><a href="../admin/viewuser.php">View Users</a></li>
                 <li class="icn_profile"><a href="../admin/removeuser.php">Remove User</a></li>
-                <li class="icn_settings"><a href="#">Options</a></li>
-                <li class="icn_security"><a href="#">Security</a></li>
+                <li class="icn_settings"><a href="../admin/option.php">Options</a></li>
+                <li class="icn_security"><a href="../admin/change.php">Change Password</a></li>
             </ul>';
                 } elseif ($_SESSION['type'] == 'normal') {
                     echo '<h3>Users</h3>
@@ -107,7 +107,7 @@ if ($_SESSION['username'] != NULL) {
                 <li class="icn_view_users"><strike>View Users</strike></li>
                 <li class="icn_profile"><strike>Remove User</strike></li>
                 <li class="icn_settings"><strike>Options</strike></li>
-                <li class="icn_security"><strike>Security</strike></li>';
+                <li class="icn_security"><strike>Change Password</strike></li>';
                 }
                 echo '<h3>Other</h3>
             <ul class="toggle">
@@ -136,7 +136,7 @@ if ($_SESSION['username'] != NULL) {
                 <li class="icn_view_users"><strike>View Users</strike></li>
                 <li class="icn_profile"><strike>Remove User</strike></li>
                 <li class="icn_settings"><strike>Options</strike></li>
-                <li class="icn_security"><strike>Security</strike></li>
+                <li class="icn_security"><strike>Change Password</strike></li>
             </ul><h3>Other</h3>
             <ul class="toggle">
                 
@@ -164,8 +164,8 @@ if ($_SESSION['username'] != NULL) {
                 <li class="icn_add_user"><a href="newuser.php">Add New User</a></li>
                 <li class="icn_view_users"><a href="viewuser.php">View Users</a></li>
                 <li class="icn_profile"><a href="removeuser.php">Remove User</a></li>
-                <li class="icn_settings"><a href="#">Options</a></li>
-                <li class="icn_security"><a href="#">Security</a></li>
+                <li class="icn_settings"><a href="option.php">Options</a></li>
+                <li class="icn_security"><a href="change.php">Change Password</a></li>
             </ul><h3>Other</h3>
             <ul class="toggle">
                 

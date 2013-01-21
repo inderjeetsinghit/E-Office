@@ -136,7 +136,7 @@ if(!session_cache_expire()){
 
                     </h3><br/></header>
                 <?php
-                echo $_GET['mes'];
+                echo base64_decode($_GET['mes']);
                 ?>
                 <br/>
                 <?php
